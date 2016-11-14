@@ -91,7 +91,10 @@ Nouislider.propTypes = {
   // http://refreshless.com/nouislider/slider-values/#section-range
   range: React.PropTypes.object.isRequired,
   // http://refreshless.com/nouislider/slider-options/#section-start
-  start: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
+  start: React.PropTypes.oneOfType([
+    React.PropTypes.arrayOf(React.PropTypes.number),
+    React.PropTypes.number
+  ]).isRequired,
   // http://refreshless.com/nouislider/slider-options/#section-step
   step: React.PropTypes.number,
   // http://refreshless.com/nouislider/slider-options/#section-tooltips
